@@ -8,12 +8,6 @@
 import Foundation
 import MapKit
 
-struct AddressResult: Identifiable {
-    let id = UUID()
-    let title: String
-    let subtitle: String
-}
-
 class ContentViewModel: NSObject, ObservableObject {
     
     @Published private(set) var results: Array<AddressResult> = []
