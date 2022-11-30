@@ -20,6 +20,7 @@ class ContentViewModel: NSObject, ObservableObject {
     }()
     
     func searchAddress(_ searchableText: String) {
+        guard searchableText.isEmpty == false else { return }
         localSearchCompleter.queryFragment = searchableText
     }
 }

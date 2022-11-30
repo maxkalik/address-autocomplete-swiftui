@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11E78E8B29376CB3002F50A8 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E78E8A29376CB3002F50A8 /* ClearButton.swift */; };
+		11E78E8D29376F2C002F50A8 /* AddressRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E78E8C29376F2C002F50A8 /* AddressRow.swift */; };
 		11F42B8C2934084D0097ABB8 /* AddressAutocompleteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F42B8B2934084D0097ABB8 /* AddressAutocompleteApp.swift */; };
 		11F42B8E2934084D0097ABB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F42B8D2934084D0097ABB8 /* ContentView.swift */; };
 		11F42B902934084E0097ABB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F42B8F2934084E0097ABB8 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11E78E8A29376CB3002F50A8 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
+		11E78E8C29376F2C002F50A8 /* AddressRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRow.swift; sourceTree = "<group>"; };
 		11F42B882934084D0097ABB8 /* AddressAutocomplete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressAutocomplete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F42B8B2934084D0097ABB8 /* AddressAutocompleteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressAutocompleteApp.swift; sourceTree = "<group>"; };
 		11F42B8D2934084D0097ABB8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 			children = (
 				11F42B99293408780097ABB8 /* ContentViewModel.swift */,
 				11F42B8D2934084D0097ABB8 /* ContentView.swift */,
+				11E78E8C29376F2C002F50A8 /* AddressRow.swift */,
+				11E78E8A29376CB3002F50A8 /* ClearButton.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -181,8 +187,10 @@
 				11F42B9C29341EDB0097ABB8 /* MapView.swift in Sources */,
 				11F42B9A293408780097ABB8 /* ContentViewModel.swift in Sources */,
 				11F42B8C2934084D0097ABB8 /* AddressAutocompleteApp.swift in Sources */,
+				11E78E8D29376F2C002F50A8 /* AddressRow.swift in Sources */,
 				11FDDA6529365FDA009499C4 /* AddressResult.swift in Sources */,
 				11FDDA6329365FBE009499C4 /* AnnotationItem.swift in Sources */,
+				11E78E8B29376CB3002F50A8 /* ClearButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

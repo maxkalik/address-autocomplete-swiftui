@@ -16,51 +16,30 @@ struct ContentView: View {
         NavigationView {
             VStack(alignment: .leading, spacing: 0) {
                 TextField("Type address", text: $viewModel.searchableText)
-                    .padding(.leading)
-                    .padding(.trailing, 40)
-                    .padding(.top)
+                    .padding()
                     .autocorrectionDisabled()
                     .focused($isFocusedTextField)
                     .font(.title)
                     .onReceive(
-                        viewModel.$searchableText.debounce(for: .seconds(1), scheduler: DispatchQueue.main)
+                        viewModel.$searchableText.debounce(
+                            for: .seconds(1),
+                            scheduler: DispatchQueue.main
+                        )
                     ) {
-                        guard $0.isEmpty == false else { return }
                         viewModel.searchAddress($0)
                     }
-                    .padding(.bottom, 10)
-                    .background(Color.white)
+                    .background(Color.init(uiColor: .systemBackground))
                     .overlay {
-                        if viewModel.searchableText.isEmpty == false {
-                            HStack {
-                                Spacer()
-                                Button {
-                                    viewModel.searchableText = ""
-                                } label: {
-                                    Image(systemName: "multiply.circle.fill")
-                                        .foregroundColor(Color(red: 0.7, green: 0.7, blue: 0.7))
-                                }
-                                .foregroundColor(.secondary)
-                                .padding(.trailing)
-                                .padding(.top, 8)
-                            }
-                        }
+                        ClearButton(text: $viewModel.searchableText)
+                            .padding(.trailing)
+                            .padding(.top, 8)
                     }
                     .onAppear {
                         isFocusedTextField = true
                     }
                 List(self.viewModel.results) { address in
-                    NavigationLink {
-                        MapView(address: address)
-                    } label: {
-                        VStack(alignment: .leading) {
-                            Text(address.title)
-                            Text(address.subtitle)
-                                .font(.caption)
-                        }
-                    }
-                    .padding(.bottom, 2)
-                    .listRowBackground(backgroundColor)
+                    AddressRow(address: address)
+                        .listRowBackground(backgroundColor)
                 }
                 .listStyle(.plain)
                 .scrollContentBackground(.hidden)
@@ -70,7 +49,7 @@ struct ContentView: View {
         }
     }
     
-    var backgroundColor: Color = Color(red: 0.95, green: 0.95, blue: 0.95)
+    var backgroundColor: Color = Color.init(uiColor: .systemGray6)
 }
 
 struct ContentView_Previews: PreviewProvider {
